@@ -1,0 +1,14 @@
+{
+  "components/HeroSection.tsx -> ./ParticleOrb": {
+    "id": "components/HeroSection.tsx -> ./ParticleOrb",
+    "files": [
+      "static/chunks/_app-pages-browser_components_ParticleOrb_tsx.js"
+    ]
+  },
+  "components/ServicesSection.tsx -> ./ServiceParticle": {
+    "id": "components/ServicesSection.tsx -> ./ServiceParticle",
+    "files": [
+      "static/chunks/_app-pages-browser_components_ServiceParticle_tsx.js"
+    ]
+  }
+}

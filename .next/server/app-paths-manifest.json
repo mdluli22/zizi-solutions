@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/services/analytics/page": "app/services/analytics/page.js",
+  "/work/page": "app/work/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/terms-of-service/page": "app/terms-of-service/page.js"
+}
