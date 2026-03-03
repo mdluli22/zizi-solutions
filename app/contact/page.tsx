@@ -7,8 +7,8 @@ import Footer from '@/components/Footer'
 const contactDetails = [
   {
     label: 'Email',
-    value: 'admin@zizi.co.za',
-    href: 'mailto:admin@zizi.co.za',
+    value: 'admin@zizisolutions.co.za',
+    href: 'mailto:admin@zizisolutions.co.za',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -52,7 +52,7 @@ const services = [
   'Custom Web Design & Development',
   'Brand Identity & Strategy',
   'Data & Business Analytics',
-  'AI Data Solutions',
+  'AI Integration Processing',
   'Other / Not sure yet',
 ]
 
@@ -154,7 +154,7 @@ export default function ContactPage() {
               Based In
             </h3>
             <p className="text-white/40 text-sm leading-relaxed">
-              South Africa — serving clients <span className="text-white/70">locally and globally.</span>
+              Durban, South Africa — serving clients <span className="text-white/70">locally and globally.</span>
             </p>
           </div>
         </div>

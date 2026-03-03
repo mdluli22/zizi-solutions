@@ -34,7 +34,7 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Floating card — Cybersecurity */}
+      {/* Floating card */}
       <div
         className="absolute float-left hidden sm:block"
         style={{ left: '3%', top: '35%', zIndex: 10 }}
@@ -51,9 +51,9 @@ export default function HeroSection() {
             Custom Software Solutions
           </h3>
           <p className="text-white/60 text-xs leading-relaxed">
-            Tailored software that accelerates your business,<br />
-            scales with demand, and integrates seamlessly across systems,<br />
-            delivered quickly with reliability and measurable impact
+            From landing pages to full-stack web applications,<br />
+            we build pixel-perfect, performant sites<br />
+            tailored to your business
           </p>
         </div>
       </div>
@@ -72,7 +72,7 @@ export default function HeroSection() {
           }}
         >
           <h3 className="font-display text-base font-black tracking-widest text-white mb-2 uppercase">
-            AI Powered Data Solutions
+            AI Integration Processing
           </h3>
           <p className="text-white/60 text-xs leading-relaxed">
             Transform raw data into clear analytics and dashboards,<br />
@@ -85,7 +85,7 @@ export default function HeroSection() {
       {/* Center hero text overlay — subtle */}
       <div className="relative z-10 text-center px-4 pointer-events-none" style={{ marginTop: '-10vh' }}>
         <p className="font-display text-xs tracking-[0.4em] text-[#f4f53c]/60 uppercase mb-4">
-          Intelligent solutions built around you.
+          Intelligent Solutions Built Around You.
         </p>
       </div>
 

@@ -35,7 +35,7 @@ export default function Footer() {
             <h4 className="font-display text-xs font-black tracking-widest uppercase text-white/30 mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:admin@zizi.co.za" className="text-white/50 hover:text-[#f4f53c] text-sm transition-colors">admin@zizi.co.za</a>
+                <a href="mailto:admin@zizisolutions.co.za" className="text-white/50 hover:text-[#f4f53c] text-sm transition-colors">admin@zizisolutions.co.za</a>
               </li>
               <li>
                 <a href="tel:+27681545803" className="text-white/50 hover:text-[#f4f53c] text-sm transition-colors">+27 68 154 5803</a>

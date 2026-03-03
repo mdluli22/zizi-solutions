@@ -206,7 +206,7 @@ export default function WorkPage() {
             </p>
           </div>
           <a
-            href="/#contact"
+            href="/contact/"
             className="shrink-0 font-display text-sm font-black tracking-widest uppercase px-10 py-5 bg-[#f4f53c] text-black rounded-full hover:scale-105 transition-all duration-300"
           >
             Start a Project

@@ -73,16 +73,17 @@ export default function WhatWeDoSection() {
           <div className="flex flex-col gap-6 pt-4 max-w-lg">
             <h3 className="font-display text-2xl font-black text-black mb-4">OUR STORY</h3>
             <p className="text-black/60 text-sm leading-relaxed mb-4">
-              Born out of a frustration of the unemployment rate in South Africa, this studio was founded to build focused, practical software and data products that solve real business problems. 
-              With fresh new perspectives and hands-on experience across product, engineering and analytics, We blend technical rigor with business sensibility to deliver measurable results.
+              This studio was established with a clear mandate: to design and deliver focused,
+              practical software and data solutions that address real-world business needs.
+              With fresh new perspectives and hands-on experience across product, engineering and analytics, we blend technical rigor with business sensibility to deliver measurable results.
             </p>
 
             <h3 className="font-display text-sm font-black text-black mb-3">WHY CHOOSE US</h3>
             <ul className="text-black/60 text-sm leading-relaxed list-disc pl-5 space-y-2">
-              <li>Direct access to the person building your product — faster decisions and clear ownership</li>
-              <li>Outcome-first engagements — we define success with customer satisfaction in mind</li>
-              <li>End-to-end delivery — from discovery and data pipelines to deployment and monitoring</li>
-              <li>Lean, flexible teams — tailored to your needs and timelines without excess overhead</li>
+              <li>Direct access to the person building your product — faster decisions and clear ownership.</li>
+              <li>Outcome-first engagements — we define success with customer satisfaction in mind.</li>
+              <li>End-to-end delivery — from discovery and data pipelines to deployment and monitoring.</li>
+              <li>Lean, flexible teams — tailored to your needs and timelines without excess overhead.</li>
             </ul>
           </div>
         </div>

@@ -3,40 +3,34 @@ import Navbar from '@/components/Navbar'
 
 const features = [
   {
-    title: 'Logo Design',
+    title: 'Custom Logo Design',
     description:
       'Distinctive, memorable logos crafted to communicate who you are at a glance — versatile across print, digital, and everything in between.',
-    icon: '✏️',
   },
   {
     title: 'Brand Guidelines',
     description:
       'A complete system — typography, colour palette, spacing rules, and usage guidelines — so your brand stays consistent everywhere it appears.',
-    icon: '📐',
   },
   {
-    title: 'Visual Identity Systems',
-    description:
-      'Business cards, letterheads, social media kits, and presentation templates designed as a cohesive, polished suite.',
-    icon: '🖼️',
-  },
-  {
-    title: 'Brand Strategy',
+    title: 'Brand Strategy & Positioning',
     description:
       'Positioning, tone of voice, and messaging frameworks that give your brand a clear purpose and a compelling story.',
-    icon: '🎯',
   },
   {
     title: 'Rebranding',
     description:
       'Evolve an existing brand with intention — preserving brand equity while modernising for a new audience or market.',
-    icon: '🔄',
   },
   {
     title: 'Brand Audits',
     description:
       'A thorough review of your current identity to identify inconsistencies and opportunities for a stronger, unified presence.',
-    icon: '🔍',
+  },
+  {
+    title: 'Visual Identity Systems',
+    description:
+      'Business cards, letterheads, social media kits, and presentation templates designed as a cohesive, polished suite.',
   },
 ]
 
@@ -101,7 +95,7 @@ export default function BrandIdentityPage() {
               className="rounded-xl p-7 border border-white/5 hover:border-white/15 transition-all duration-300"
               style={{ background: 'rgba(255,255,255,0.03)' }}
             >
-              <span className="text-3xl mb-4 block">{f.icon}</span>
+              {/* <span className="text-3xl mb-4 block">{f.icon}</span> */}
               <h3 className="font-display font-black text-white text-lg tracking-wide mb-3 uppercase">
                 {f.title}
               </h3>
@@ -161,7 +155,7 @@ export default function BrandIdentityPage() {
             </p>
           </div>
           <a
-            href="/#contact"
+            href="/contact/"
             className="shrink-0 font-display text-sm font-black tracking-widest uppercase px-10 py-5 bg-[#f4f53c] text-black rounded-full hover:scale-105 transition-all duration-300"
           >
             Get in Touch

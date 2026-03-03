@@ -3,40 +3,40 @@ import Navbar from '@/components/Navbar'
 
 const features = [
   {
-    title: 'Data Pipeline & ETL',
+    title: 'Data Strategy & Consulting',
+    description:
+      'Not sure where to start? We help you map your data landscape, identify gaps, and build a clear roadmap to a data-driven operation.',
+    // icon: '🗺️',
+  },
+  {
+    title: 'Data Engineering & Integration',
     description:
       'Design and build robust ingestion, transformation, and loading pipelines that get reliable, clean data to wherever you need it.',
-    icon: '🔄',
+    // icon: '🔄',
   },
   {
-    title: 'Interactive Dashboards',
+    title: 'Dashboards & Reporting',
     description:
       'Custom dashboards and reporting tools that surface KPIs clearly — built for your team, not a generic template.',
-    icon: '📊',
+    // icon: '📊',
   },
   {
-    title: 'Predictive Analytics',
+    title: 'Predictive Analytics & ML Models',
     description:
       'Statistical models and machine learning to forecast demand, detect churn, flag anomalies, and surface opportunities before they pass.',
-    icon: '🔮',
+    // icon: '🔮',
   },
   {
     title: 'Data Warehouse Design',
     description:
       'Schema design, data modelling, and warehouse architecture that scales with your data volume without sacrificing query performance.',
-    icon: '🗄️',
+    // icon: '🗄️',
   },
   {
     title: 'Reporting & Automation',
     description:
       'Scheduled reports, alert systems, and automated data delivery so stakeholders always have the numbers they need.',
-    icon: '⚙️',
-  },
-  {
-    title: 'Data Strategy Consulting',
-    description:
-      'Not sure where to start? We help you map your data landscape, identify gaps, and build a roadmap to a data-driven operation.',
-    icon: '🗺️',
+    // icon: '⚙️',
   },
 ]
 
@@ -101,7 +101,7 @@ export default function AnalyticsPage() {
               className="rounded-xl p-7 border border-white/5 hover:border-white/15 transition-all duration-300"
               style={{ background: 'rgba(255,255,255,0.03)' }}
             >
-              <span className="text-3xl mb-4 block">{f.icon}</span>
+              {/* <span className="text-3xl mb-4 block">{f.icon}</span> */}
               <h3 className="font-display font-black text-white text-lg tracking-wide mb-3 uppercase">
                 {f.title}
               </h3>
@@ -161,7 +161,7 @@ export default function AnalyticsPage() {
             </p>
           </div>
           <a
-            href="/#contact"
+            href="/contact/"
             className="shrink-0 font-display text-sm font-black tracking-widest uppercase px-10 py-5 bg-[#f4f53c] text-black rounded-full hover:scale-105 transition-all duration-300"
           >
             Get in Touch

@@ -23,11 +23,12 @@ const services = [
     gradient: 'linear-gradient(135deg, #1a0808 0%, #0a1500 100%)',
     path: '/services/analytics',
   },
-  // {
-  //   title: 'DIGITAL &\nPRESENCE',
-  //   colorScheme: 'purple-pink' as const,
-  //   gradient: 'linear-gradient(135deg, #0f0820 0%, #050a1a 100%)',
-  // },
+  {
+    title: 'AI\nINTEGRATION\nPROCESSING',
+    colorScheme: 'purple-pink' as const,
+    gradient: 'linear-gradient(135deg, #0f0820 0%, #050a1a 100%)',
+    path: '/services/ai-integration',
+  },
 ]
 
 export default function ServicesSection() {

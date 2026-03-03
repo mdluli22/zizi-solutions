@@ -3,40 +3,34 @@ import Navbar from '@/components/Navbar'
 
 const features = [
   {
-    title: 'Custom Web Development',
+    title: 'Web & Mobile Applications',
     description:
-      'From landing pages to full-stack web applications, we build pixel-perfect, performant sites tailored to your business requirements.',
-    icon: '⌨️',
+      'From landing pages to full-stack web and mobile applications, we build pixel-perfect, performant products tailored to your business requirements.',
+  },
+  {
+    title: 'API Design & Integrations',
+    description:
+      'Seamlessly connect your product to payment gateways, CRMs, marketing tools, and custom third-party APIs with clean, documented interfaces.',
+  },
+  {
+    title: 'Cloud-Native Architectures',
+    description:
+      'Scalable, resilient infrastructure built on modern cloud platforms — designed to handle growth without costly rewrites.',
+  },
+  {
+    title: 'CI/CD Pipelines',
+    description:
+      'Automated testing, build, and deployment pipelines that let your team ship faster and with confidence on every release.',
   },
   {
     title: 'Responsive UI/UX Design',
     description:
       'User-first interfaces that look great on every device — designed for clarity, speed, and conversion.',
-    icon: '🎨',
-  },
-  {
-    title: 'CMS & E-commerce Integration',
-    description:
-      'Headless CMS setups, Shopify builds, and custom admin panels that give you full content control without the complexity.',
-    icon: '🛒',
-  },
-  {
-    title: 'Performance Optimization',
-    description:
-      'Lighthouse-grade performance tuning — fast load times, SEO-ready structure, and Core Web Vitals that keep Google happy.',
-    icon: '⚡',
-  },
-  {
-    title: 'API & Third-party Integration',
-    description:
-      'Seamlessly connect your site to payment gateways, CRMs, marketing tools, and custom APIs.',
-    icon: '🔗',
   },
   {
     title: 'Ongoing Support & Maintenance',
     description:
       'We stay with you post-launch — monitoring, updates, bug fixes, and iterative improvements as your business grows.',
-    icon: '🛡️',
   },
 ]
 
@@ -101,7 +95,7 @@ export default function WebDesignDevPage() {
               className="rounded-xl p-7 border border-white/5 hover:border-white/15 transition-all duration-300"
               style={{ background: 'rgba(255,255,255,0.03)' }}
             >
-              <span className="text-3xl mb-4 block">{f.icon}</span>
+              {/* <span className="text-3xl mb-4 block">{f.icon}</span> */}
               <h3 className="font-display font-black text-white text-lg tracking-wide mb-3 uppercase">
                 {f.title}
               </h3>
@@ -161,7 +155,7 @@ export default function WebDesignDevPage() {
             </p>
           </div>
           <a
-            href="/#contact"
+            href="/contact/"
             className="shrink-0 font-display text-sm font-black tracking-widest uppercase px-10 py-5 bg-[#f4f53c] text-black rounded-full hover:scale-105 transition-all duration-300"
           >
             Get in Touch
