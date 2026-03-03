@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST='{"components/HeroSection.tsx -> ./ParticleOrb":{"id":6261,"files":["static/chunks/261.67ed8950506cd555.js"]},"components/ServicesSection.tsx -> ./ServiceParticle":{"id":1148,"files":["static/chunks/0.a6a5638ab471d3ee.js"]}}';
