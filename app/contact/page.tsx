@@ -65,15 +65,38 @@ export default function ContactPage() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // TODO: wire up to your backend / email service
-    setSubmitted(true)
+    setLoading(true)
+    setError(null)
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        setError(data.error || 'Something went wrong. Please try again.')
+      } else {
+        setSubmitted(true)
+        setFormData({ name: '', email: '', company: '', service: '', message: '' })
+      }
+    } catch {
+      setError('Network error. Please check your connection and try again.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -260,11 +283,18 @@ export default function ContactPage() {
                 />
               </div>
 
+              {error && (
+                <p className="text-red-400 text-sm border border-red-400/20 bg-red-400/5 rounded-lg px-4 py-3">
+                  {error}
+                </p>
+              )}
+
               <button
                 type="submit"
-                className="self-start font-display text-sm font-black tracking-widest uppercase px-10 py-4 bg-[#f4f53c] text-black rounded-full hover:scale-105 transition-all duration-300 mt-2"
+                disabled={loading}
+                className="self-start font-display text-sm font-black tracking-widest uppercase px-10 py-4 bg-[#f4f53c] text-black rounded-full hover:scale-105 transition-all duration-300 mt-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Send Message
+                {loading ? 'Sending…' : 'Send Message'}
               </button>
             </form>
           )}
