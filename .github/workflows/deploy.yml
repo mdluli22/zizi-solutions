@@ -55,6 +55,6 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           port: ${{ secrets.FTP_PORT }}
-          protocol: ftp
+          protocol: ftps
           local-dir: deploy/
           server-dir: ${{ secrets.REMOTE_DIR }}/
