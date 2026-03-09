@@ -1,0 +1,60 @@
+name: Deploy to HostAfrica
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js (standalone)
+        run: npm run build
+
+      - name: Prepare deploy folder
+        run: |
+          rm -rf deploy
+          mkdir -p deploy
+
+          echo "=== DEBUG: .next contents ==="
+          ls -la .next || true
+          echo "=== DEBUG: .next/standalone ==="
+          ls -la .next/standalone || true
+
+          if [ ! -d ".next/standalone" ]; then
+            echo "❌ .next/standalone not found."
+            exit 1
+          fi
+
+          cp -R .next/standalone/. deploy/
+          mkdir -p deploy/.next
+          cp -R .next/static deploy/.next/
+
+          if [ -d public ]; then
+            cp -R public deploy/public
+          fi
+
+      - name: Upload to HostAfrica via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftp
+          local-dir: deploy/
+          server-dir: ${{ secrets.REMOTE_DIR }}/
