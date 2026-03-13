@@ -111,6 +111,15 @@ export default function ContactPage() {
           style={{ background: 'radial-gradient(ellipse, rgba(244,245,60,0.07) 0%, transparent 70%)' }}
         />
         <div className="relative max-w-7xl mx-auto">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 font-display text-xs tracking-widest uppercase text-white/40 hover:text-[#f4f53c] transition-colors mb-8"
+          >
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M13 3L3 13M3 13H11M3 13V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            Back to Home
+          </Link>
           <p className="font-display text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#f4f53c' }}>
             Let&apos;s Talk
           </p>

@@ -31,7 +31,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-10">
           {[
             { label: 'Services', href: pathname === '/' ? '#services' : '/#services' },
-            { label: 'About', href: pathname === '/' ? '#about' : '/#about' },
+            { label: 'About', href: '/about' },
             { label: 'Work', href: '/work' },
             { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className="md:hidden bg-black/95 border-t border-white/10 px-6 py-8 flex flex-col gap-6">
           {[
             { label: 'Services', href: pathname === '/' ? '#services' : '/#services' },
-            { label: 'About', href: pathname === '/' ? '#about' : '/#about' },
+            { label: 'About', href: '/about' },
             { label: 'Work', href: '/work' },
             { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (

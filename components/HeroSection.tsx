@@ -84,7 +84,7 @@ export default function HeroSection() {
 
       {/* Center hero text overlay — subtle */}
       <div className="relative z-10 text-center px-4 pointer-events-none" style={{ marginTop: '-10vh' }}>
-        <p className="font-display text-xs tracking-[0.4em] text-[#f4f53c]/60 uppercase mb-4">
+        <p className="font-display text-base tracking-[0.4em] text-[#f4f53c]/90 uppercase mb-4">
           Intelligent Solutions Built Around You.
         </p>
       </div>

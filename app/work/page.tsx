@@ -50,11 +50,11 @@ const projects = [
 //   },
 ]
 
-const stats = [
-  { value: '5+', label: 'Projects Delivered' },
-  { value: '3+', label: 'Happy Clients' },
-  { value: '100%', label: 'On-time Delivery' },
-]
+// const stats = [
+//   { value: '5+', label: 'Projects Delivered' },
+//   { value: '3+', label: 'Happy Clients' },
+//   { value: '100%', label: 'On-time Delivery' },
+// ]
 
 export default function WorkPage() {
   return (
@@ -69,6 +69,15 @@ export default function WorkPage() {
           style={{ background: 'radial-gradient(ellipse, rgba(244,245,60,0.06) 0%, transparent 70%)' }}
         />
         <div className="relative max-w-7xl mx-auto">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 font-display text-xs tracking-widest uppercase text-white/40 hover:text-[#f4f53c] transition-colors mb-8"
+          >
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+              <path d="M13 3L3 13M3 13H11M3 13V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+            Back to Home
+          </Link>
           <p className="font-display text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#f4f53c' }}>
             Portfolio
           </p>
@@ -86,7 +95,7 @@ export default function WorkPage() {
       </section>
 
       {/* Stats bar */}
-      <section className="border-y border-white/5" style={{ background: 'rgba(255,255,255,0.02)' }}>
+      {/* <section className="border-y border-white/5" style={{ background: 'rgba(255,255,255,0.02)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10 grid grid-cols-3 gap-6">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
@@ -100,7 +109,7 @@ export default function WorkPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Projects */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24 flex flex-col gap-6">
