@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Zizi Solutions',
-  description: 'Intelligence solutions built around you.',
+  description: 'Intelligent solutions built around you.',
 }
 
 export default function RootLayout({
