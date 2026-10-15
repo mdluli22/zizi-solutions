@@ -88,7 +88,7 @@ const sections = [
     content: [
       'If you have any questions or concerns about this Privacy Policy or how we handle your data, please contact us:',
       'Email: admin@zizi.co.za',
-      'Phone: +27 68 154 5803',
+      'Phone: +27 78 189 7780',
     ],
   },
 ]

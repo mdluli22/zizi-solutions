@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
@@ -17,15 +18,15 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
+        scrolled ? 'bg-black/90 backdrop-blur-[12px] border-b border-white/5' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 gap-4">
         {/* Logo */}
-        <a href="/" className="font-display text-xl lg:text-2xl font-black tracking-wide shrink-0 text-white">
-          <img src="/whiteLogo.png" alt="Zizi Solutions Logo" className="inline-block h-8 w-auto mr-2" />
+        <Link href="/" className="font-display text-xl lg:text-2xl font-black tracking-wide shrink-0 text-white">
+          <Image width={44} height={32} src="/whiteLogo.png" alt="Zizi Solutions Logo" className="inline-block h-8 w-auto mr-2" />
           ZIZI <span style={{ color: 'var(--yellow-neon)' }}>SOLUTIONS</span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-2">

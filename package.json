@@ -5,25 +5,37 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "node scripts/start.cjs",
+    "lint": "eslint . --ext .js,.cjs,.ts,.tsx --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.cjs"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "20.11.5",
-    "@types/react": "18.2.48",
-    "@types/react-dom": "18.2.18",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.0.1",
-    "next": "14.2.0",
-    "nodemailer": "^8.0.1",
-    "postcss": "^8",
-    "react": "^18",
-    "react-dom": "^18",
-    "tailwindcss": "^3.3.0",
+    "next": "^15.5.28",
+    "nodemailer": "^10.1.1",
+    "postcss": "^8.5.23",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.3",
     "typescript": "5.3.3"
   },
   "devDependencies": {
     "@types/nodemailer": "^7.0.11",
     "eslint": "^8",
-    "eslint-config-next": "14.2.0"
+    "eslint-config-next": "^14.2.35"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "@next/eslint-plugin-next": {
+      "glob": "^10.5.0"
+    }
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

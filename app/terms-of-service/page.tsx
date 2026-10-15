@@ -112,7 +112,7 @@ const sections = [
     content: [
       'If you have any questions about these Terms of Service, please reach out:',
       'Email: admin@zizi.co.za',
-      'Phone: +27 68 154 5803',
+      'Phone: +27 78 189 7780',
     ],
   },
 ]

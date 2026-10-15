@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* Keep the established border and gradient appearance after the v4 migration. */
+@layer base {
+  *, ::before, ::after { border-color: var(--color-gray-200, currentColor); }
+}
+
 
 :root {
   --yellow-neon: #f4f53c;
   --dark: #0a0a0a;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 }
 
 html {

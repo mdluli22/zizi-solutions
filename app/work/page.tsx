@@ -3,6 +3,7 @@ import { pageMetadata } from '../../lib/seo'
 export const metadata = pageMetadata("Website Development Portfolio", "Explore Zizi Solutions website projects, including Security Professionals and our own website, with descriptions of the work delivered.", "/work")
 
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
@@ -181,7 +182,9 @@ export default function WorkPage() {
               <div
                 className={`relative hidden lg:block min-h-[420px] overflow-hidden ${i % 2 !== 0 ? 'lg:order-1' : ''}`}
               >
-                <img
+                <Image
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   src={p.image}
                   alt={p.title}
                   className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-45 transition-opacity duration-500 scale-105 group-hover:scale-100 transition-transform"

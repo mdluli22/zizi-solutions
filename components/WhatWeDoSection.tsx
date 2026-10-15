@@ -56,10 +56,10 @@ export default function WhatWeDoSection() {
               WHAT<br />WE DO
             </h2>
             <p className="text-black/60 text-sm leading-relaxed mb-4 max-w-sm">
-              We develop digital products and provide consulting services to our clients on digital presence and data solutions.
+              We help small and medium businesses attract customers with better websites, save time through automation and see their performance clearly.
             </p>
             <p className="text-black/60 text-sm leading-relaxed mb-12 max-w-sm">
-              We prioritize helping businesses streamline their daily core operations with technological and digital solutions.
+              Start with the challenge that matters most to your business. We’ll work with you to build a practical solution.
             </p>
             <a
               href="#services"

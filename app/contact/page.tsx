@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import { services } from '../../lib/services'
 
 const contactDetails = [
   {
@@ -18,43 +19,18 @@ const contactDetails = [
   },
   {
     label: 'Phone',
-    value: '+27 68 154 5803',
-    href: 'tel:+27681545803',
+    value: '+27 78 189 7780',
+    href: 'tel:+27781897780',
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
       </svg>
     ),
   },
-  {
-    label: 'TikTok',
-    value: '@zizisolutions',
-    href: 'https://www.tiktok.com/@zizisolutions',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Facebook',
-    value: 'Zizi Solutions',
-    href: 'https://www.facebook.com/zizisolutions',
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-      </svg>
-    ),
-  },
+
 ]
 
-const services = [
-  'Custom Web Design & Development',
-  'Brand Identity & Strategy',
-  'Data & Business Analytics',
-  'AI Integration Processing',
-  'Other / Not sure yet',
-]
+const serviceOptions = [...services.map((service) => service.title), 'Other / Not sure yet']
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -63,6 +39,7 @@ export default function ContactPage() {
     company: '',
     service: '',
     message: '',
+    website: '',
   })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -90,7 +67,7 @@ export default function ContactPage() {
         setError(data.error || 'Something went wrong. Please try again.')
       } else {
         setSubmitted(true)
-        setFormData({ name: '', email: '', company: '', service: '', message: '' })
+        setFormData({ name: '', email: '', company: '', service: '', message: '', website: '' })
       }
     } catch {
       setError('Network error. Please check your connection and try again.')
@@ -225,6 +202,10 @@ export default function ContactPage() {
               className="rounded-2xl p-6 sm:p-8 lg:p-10 border border-white/5 flex flex-col gap-6"
               style={{ background: 'rgba(255,255,255,0.03)' }}
             >
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="contact-website">Leave this field empty</label>
+                <input id="contact-website" name="website" value={formData.website} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label htmlFor="contact-name" className="font-display text-xs tracking-widest uppercase text-white/90">Name *</label>
@@ -232,6 +213,7 @@ export default function ContactPage() {
                     type="text"
                     id="contact-name"
                     name="name"
+                    maxLength={120}
                     required
                     value={formData.name}
                     onChange={handleChange}
@@ -245,6 +227,7 @@ export default function ContactPage() {
                     type="email"
                     id="contact-email"
                     name="email"
+                    maxLength={254}
                     required
                     value={formData.email}
                     onChange={handleChange}
@@ -260,6 +243,7 @@ export default function ContactPage() {
                   type="text"
                   id="contact-company"
                   name="company"
+                    maxLength={150}
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Your company name (optional)"
@@ -277,7 +261,7 @@ export default function ContactPage() {
                   className="bg-[#0a0a0a] border border-white/25 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f4f53c]/50 transition-colors appearance-none cursor-pointer"
                 >
                   <option value="" disabled>Select a service...</option>
-                  {services.map((s) => (
+                  {serviceOptions.map((s) => (
                     <option key={s} value={s}>{s}</option>
                   ))}
                 </select>
@@ -288,6 +272,7 @@ export default function ContactPage() {
                 <textarea
                   id="contact-message"
                   name="message"
+                    maxLength={5000}
                   required
                   rows={5}
                   value={formData.message}
@@ -298,7 +283,7 @@ export default function ContactPage() {
               </div>
 
               {error && (
-                <p className="text-red-400 text-sm border border-red-400/20 bg-red-400/5 rounded-lg px-4 py-3">
+                <p role="alert" className="text-red-400 text-sm border border-red-400/20 bg-red-400/5 rounded-lg px-4 py-3">
                   {error}
                 </p>
               )}

@@ -12,14 +12,28 @@ function escapeHtml(value: string) {
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json()
+    let body: unknown
+    try {
+      body = await req.json()
+    } catch {
+      return NextResponse.json({ error: 'Invalid JSON request.' }, { status: 400 })
+    }
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      return NextResponse.json({ error: 'Invalid contact details.' }, { status: 400 })
+    }
+    const fields = body as Record<string, unknown>
+    for (const key of ['name', 'email', 'company', 'service', 'message', 'website']) {
+      if (fields[key] !== undefined && typeof fields[key] !== 'string') {
+        return NextResponse.json({ error: 'Contact fields must be text.' }, { status: 400 })
+      }
+    }
 
-    const name = String(body.name || '').trim()
-    const email = String(body.email || '').trim()
-    const company = String(body.company || '').trim()
-    const service = String(body.service || '').trim()
-    const message = String(body.message || '').trim()
-    const website = String(body.website || '').trim() // honeypot field
+    const name = String(fields.name || '').trim()
+    const email = String(fields.email || '').trim()
+    const company = String(fields.company || '').trim()
+    const service = String(fields.service || '').trim()
+    const message = String(fields.message || '').trim()
+    const website = String(fields.website || '').trim() // honeypot field
 
     if (website) {
       return NextResponse.json({ success: true }, { status: 200 })
@@ -64,10 +78,17 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    const port = Number(SMTP_PORT || 465)
+    if (!Number.isInteger(port) || port < 1 || port > 65535 ||
+        (SMTP_SECURE !== undefined && !['true', 'false'].includes(SMTP_SECURE))) {
+      console.error('[contact/route] Invalid SMTP port or secure setting')
+      return NextResponse.json({ error: 'Email service is not configured.' }, { status: 500 })
+    }
+
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
-      port: Number(SMTP_PORT) || 465,
-      secure: SMTP_SECURE === 'true',
+      port,
+      secure: SMTP_SECURE ? SMTP_SECURE === 'true' : port === 465,
       auth: {
         user: SMTP_USER,
         pass: SMTP_PASS,
@@ -128,20 +149,26 @@ export async function POST(req: NextRequest) {
       `,
     })
 
-    await transporter.sendMail({
-      from: `"Zizi Solutions" <${SMTP_USER}>`,
-      to: email,
-      subject: "We've received your message — Zizi Solutions",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
-          <h2 style="color: #f4f53c; font-size: 24px; margin-bottom: 16px;">Thanks for reaching out, ${safeName}!</h2>
-          <p style="color: #aaa; line-height: 1.7;">We've received your message and will get back to you within <strong style="color: #fff;">24 hours</strong> on business days.</p>
-          <p style="color: #aaa; line-height: 1.7; margin-top: 16px;">If your matter is urgent, you can reach us directly at <a href="tel:+27681545803" style="color: #f4f53c;">+27 68 154 5803</a>.</p>
-          <hr style="border: none; border-top: 1px solid #222; margin: 32px 0;" />
-          <p style="color: #555; font-size: 12px;">— The Zizi Solutions Team · zizisolutions.co.za</p>
-        </div>
-      `,
-    })
+    try {
+      await transporter.sendMail({
+        from: `"Zizi Solutions" <${SMTP_USER}>`,
+        to: email,
+        subject: "We've received your message — Zizi Solutions",
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
+            <h2 style="color: #f4f53c; font-size: 24px; margin-bottom: 16px;">Thanks for reaching out, ${safeName}!</h2>
+            <p style="color: #aaa; line-height: 1.7;">We've received your message and will get back to you within <strong style="color: #fff;">24 hours</strong> on business days.</p>
+            <p style="color: #aaa; line-height: 1.7; margin-top: 16px;">If your matter is urgent, you can reach us directly at <a href="tel:+27781897780" style="color: #f4f53c;">+27 78 189 7780</a>.</p>
+            <hr style="border: none; border-top: 1px solid #222; margin: 32px 0;" />
+            <p style="color: #555; font-size: 12px;">— The Zizi Solutions Team · zizisolutions.co.za</p>
+          </div>
+        `,
+      })
+
+    } catch (error) {
+      // The enquiry has already been delivered. Avoid inviting duplicate submissions.
+      console.error('[contact/route] Confirmation email failed:', error)
+    }
 
     return NextResponse.json({ success: true }, { status: 200 })
   } catch (error) {

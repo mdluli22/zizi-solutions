@@ -1,6 +1,6 @@
 import { pageMetadata } from '../lib/seo'
 
-export const metadata = pageMetadata("Website Development & Custom Software", "Zizi Solutions builds websites and custom software, with brand identity, data analytics and AI integration services for businesses.", "/")
+export const metadata = pageMetadata("Websites, Business Automation & Data Analytics", "Attract customers, save time and understand your business with website development and SEO, business automation and AI integration, and data dashboards and reporting.", "/")
 
 import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'

@@ -1,8 +1,9 @@
 import { pageMetadata } from '../../lib/seo'
 
-export const metadata = pageMetadata("About Zizi Solutions", "Meet Zizi Solutions, a digital solutions agency delivering websites, software, branding, analytics and AI integration.", "/about")
+export const metadata = pageMetadata("About Zizi Solutions", "Meet Zizi Solutions, a digital solutions agency delivering website development and SEO, business automation and AI integration, and data dashboards and reporting.", "/about")
 
 import Link from 'next/link'
+import Image from 'next/image'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
@@ -143,7 +144,9 @@ export default function AboutPage() {
               >
                 {/* Profile photo */}
                 {member.image ? (
-                  <img
+                  <Image
+                    width={80}
+                    height={80}
                     src={member.image}
                     alt={member.name}
                     className="w-20 h-20 rounded-full mb-6 object-cover object-top"

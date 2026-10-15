@@ -4,8 +4,8 @@ import { siteUrl } from '../lib/seo'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: 'Zizi Solutions | Website Development & Custom Software', template: '%s | Zizi Solutions' },
-  description: 'Website development, custom software, brand identity, data analytics and AI integration for businesses in South Africa and beyond.',
+  title: { default: 'Zizi Solutions | Websites, Business Automation & Data Analytics', template: '%s | Zizi Solutions' },
+  description: 'Website development and SEO, business automation and AI integration, and data dashboards and reporting for small and medium businesses in South Africa and beyond.',
 }
 
 const business = {
@@ -15,10 +15,9 @@ const business = {
   name: 'Zizi Solutions',
   url: siteUrl,
   logo: `${siteUrl}/logo.png`,
-  description: 'Website development, custom software, brand identity, data analytics and AI integration.',
+  description: 'Website development and SEO, business automation and AI integration, and data dashboards and reporting.',
   email: 'admin@zizisolutions.co.za',
-  telephone: '+27681545803',
-  sameAs: ['https://www.tiktok.com/@zizisolutions', 'https://www.facebook.com/zizisolutions'],
+  telephone: '+27781897780',
 }
 
 export default function RootLayout({
