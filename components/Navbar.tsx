@@ -33,7 +33,7 @@ export default function Navbar() {
           {[
             { label: 'Services', href: pathname === '/' ? '#services' : '/#services' },
             { label: 'About', href: '/about' },
-            { label: 'Work', href: '/work' },
+            { label: 'Our Work', href: '/work' },
             { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
             <Link
@@ -74,7 +74,7 @@ export default function Navbar() {
           {[
             { label: 'Services', href: pathname === '/' ? '#services' : '/#services' },
             { label: 'About', href: '/about' },
-            { label: 'Work', href: '/work' },
+            { label: 'Our Work', href: '/work' },
             { label: 'Contact', href: '/contact' },
           ].map(({ label, href }) => (
             <Link

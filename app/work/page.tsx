@@ -1,235 +1,99 @@
 import { pageMetadata } from '../../lib/seo'
-
-export const metadata = pageMetadata("Website Development Portfolio", "Explore Zizi Solutions website projects, including Security Professionals and our own website, with descriptions of the work delivered.", "/work")
-
 import Link from 'next/link'
 import Image from 'next/image'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import ArrowIcon from '../../components/ArrowIcon'
+
+export const metadata = pageMetadata('Our Work', 'Explore a client website project and the Zizi Solutions in-house website, with clear summaries of the project goals, development work and features delivered.', '/work')
 
 const projects = [
   {
-    id: 1,
     title: 'Security Professionals',
-    client: 'Firearm Safety Training',
-    category: 'Web Design & Development',
-    categoryPath: '/services/web-design-dev',
-    year: '2025',
-    description:
-      'Secpro is your trusted partner for professional, accredited firearm training and unforgettable shooting experiences.',
-    outcomes: ['Website design and development for a firearm training business', 'Mobile-responsive page layouts', 'Booking flow improvements'],
-    tags: ['Marketing Advancement', 'Web Development', 'SEO upgrade'],
-    gradient: 'linear-gradient(135deg, #1a0808 0%, #0a1500 100%)',
-    accentColor: 'rgba(40,160,40,0.15)',
+    type: 'Client project',
+    context: 'Website for a firearm safety training business',
+    goal: 'Present the business and its training offering online, with a clear route for prospective customers to make an enquiry or start a booking.',
+    solution: 'Designed and developed a responsive website, with page layouts and a booking enquiry flow suited to the business.',
+    features: ['Website design and development', 'Mobile-responsive page layouts', 'Booking enquiry flow'],
     image: '/Secpro.png',
+    imageAlt: 'Security Professionals project logo',
+    gradient: 'linear-gradient(135deg, #101b12 0%, #101010 100%)',
   },
   {
-    id: 2,
     title: 'Zizi Solutions',
-    client: 'In-house: Zizi Solutions',
-    category: 'Custom Web Design & Development',
-    categoryPath: '/services/web-design-dev',
-    // year: '2024',
-    description:
-      'Our own digital home. Built from the ground up to reflect who we are: a modern, performance-first website that communicates our services, showcases our work, and converts visitors into clients. From the animated particle orb to the dark editorial layout, every detail was intentional.',
-    outcomes: ['Built with Next.js App Router and dynamically imported animations', 'Fully responsive across all devices with a bold, consistent design system', 'Service and portfolio pages linked to a contact enquiry form'],
-    tags: ['Next.js', 'Tailwind CSS', 'Brand Identity', 'Motion'],
-    gradient: 'linear-gradient(135deg, #1a0a2e 0%, #0a1a2e 100%)',
-    accentColor: 'rgba(80,40,180,0.15)',
+    type: 'In-house project',
+    context: 'Our own business website',
+    goal: 'Explain our three services, show examples of our website work and give visitors a straightforward way to discuss a project.',
+    solution: 'Built this website with Next.js and Tailwind CSS, using a consistent visual style, dedicated service pages and a contact enquiry form.',
+    features: ['Dedicated pages for websites, automation and data reporting', 'Responsive navigation and page layouts', 'Contact form with validation and email delivery', 'Page metadata, sitemap and business structured data'],
     image: '/1.png',
+    imageAlt: 'Zizi Solutions project logo',
+    gradient: 'linear-gradient(135deg, #1a1028 0%, #101010 100%)',
   },
-//   {
-//     id: 3,
-//     title: 'Brand Identity System',
-//     client: 'Confidential: Professional Services',
-//     category: 'Brand Identity & Strategy',
-//     categoryPath: '/services/brand-identity',
-//     year: '2024',
-//     description:
-//       'Complete visual identity and brand strategy for a growing professional services firm entering a competitive market: from logo and colour system through to pitch deck templates and social media kits.',
-//     outcomes: ['Cohesive identity across 12 brand touchpoints', 'New positioning led to 3 enterprise client wins within 6 months', 'Full brand guidelines delivered for internal team use'],
-//     tags: ['Logo Design', 'Brand Strategy', 'Visual Identity'],
-//     gradient: 'linear-gradient(135deg, #2e0a0a 0%, #1a1000 100%)',
-//     accentColor: 'rgba(180,40,40,0.15)',
-//     image: '/3.png',
-//   },
 ]
-
-// const stats = [
-//   { value: '5+', label: 'Projects Delivered' },
-//   { value: '3+', label: 'Happy Clients' },
-//   { value: '100%', label: 'On-time Delivery' },
-// ]
 
 export default function WorkPage() {
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
       <Navbar />
-
-      {/* Hero */}
-      <section className="relative overflow-hidden pt-40 pb-24 px-6 lg:px-12">
+      <section className="relative overflow-hidden pt-32 sm:pt-40 pb-12 sm:pb-16 px-6 lg:px-12">
         <div className="absolute inset-0 grid-texture opacity-40 pointer-events-none" />
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse, rgba(244,245,60,0.06) 0%, transparent 70%)' }}
-        />
         <div className="relative max-w-7xl mx-auto">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-display text-xs tracking-widest uppercase text-white/40 hover:text-[#f4f53c] transition-colors mb-8"
-          >
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-              <path d="M13 3L3 13M3 13H11M3 13V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-            Back to Home
-          </Link>
-          <p className="font-display text-xs tracking-[0.4em] uppercase mb-4" style={{ color: '#f4f53c' }}>
-            Portfolio
-          </p>
-          <h1
-            className="font-display font-black leading-none tracking-tight text-white mb-8"
-            style={{ fontSize: 'clamp(3.5rem, 10vw, 9rem)', lineHeight: '0.92' }}
-          >
-            OUR<br />
-            <span style={{ color: 'var(--yellow-neon)' }}>WORK_</span>
-          </h1>
-          <p className="text-white/50 text-sm leading-relaxed max-w-xl">
-            A selection of projects we&apos;ve delivered, each one built to solve a real problem, grounded in strategy, with a summary of the work delivered.
-          </p>
+          <Link href="/" className="button-secondary mb-8"><ArrowIcon direction="left" className="mr-3" />Back to home</Link>
+          <p className="text-[#f4f53c] text-xs uppercase tracking-[0.2em] mb-4">Website development portfolio</p>
+          <h1 className="font-display font-black text-5xl sm:text-7xl lg:text-8xl tracking-tight leading-none mb-6">Our <span className="text-[#f4f53c]">Work</span></h1>
+          <p className="text-white/75 text-base sm:text-lg leading-relaxed max-w-2xl">A client website and our own in-house website. Here is what each project was built to do, how we approached it and the features delivered.</p>
         </div>
       </section>
 
-      {/* Stats bar */}
-      {/* <section className="border-y border-white/5" style={{ background: 'rgba(255,255,255,0.02)' }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-10 grid grid-cols-3 gap-6">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <div
-                className="font-display font-black leading-none mb-1"
-                style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', color: 'var(--yellow-neon)' }}
-              >
-                {s.value}
+      <section aria-label="Website projects" className="max-w-7xl mx-auto px-6 lg:px-12 pb-20 flex flex-col gap-8">
+        {projects.map((project) => (
+          <article key={project.title} className="rounded-2xl overflow-hidden border border-white/10" style={{ background: project.gradient }}>
+            <div className="grid grid-cols-1 lg:grid-cols-5">
+              <div className="relative min-h-[240px] sm:min-h-[300px] lg:min-h-[420px] lg:col-span-2 bg-black/20 border-b lg:border-b-0 lg:border-r border-white/10">
+                <Image fill sizes="(min-width: 1024px) 40vw, 100vw" src={project.image} alt={project.imageAlt} className="object-contain p-8 sm:p-12" />
               </div>
-              <p className="text-white/40 text-xs tracking-widest uppercase font-display">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-      {/* Projects */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-24 flex flex-col gap-6">
-        {projects.map((p, i) => (
-          <div
-            key={p.id}
-            className="group relative rounded-2xl overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-500"
-            style={{ background: p.gradient }}
-          >
-            {/* Glow blob */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{ background: `radial-gradient(circle at ${i % 2 === 0 ? '10% 50%' : '90% 50%'}, ${p.accentColor} 0%, transparent 60%)` }}
-            />
-
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-0">
-              {/* Content */}
-              <div className={`p-10 lg:p-14 flex flex-col justify-between ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                <div>
-                  {/* Meta row */}
-                  <div className="flex flex-wrap items-center gap-4 mb-6">
-                    <Link
-                      href={p.categoryPath}
-                      className="font-display text-xs tracking-widest uppercase px-3 py-1 rounded-full border border-white/20 text-white/50 hover:text-[#f4f53c] hover:border-[#f4f53c]/40 transition-colors"
-                    >
-                      {p.category}
-                    </Link>
-                    <span className="font-display text-xs tracking-widest text-white/30 uppercase">{p.year}</span>
+              <div className="lg:col-span-3 p-6 sm:p-8 lg:p-12">
+                <span className="inline-flex rounded-full border border-[#f4f53c]/30 bg-[#f4f53c]/5 text-[#f4f53c] text-xs font-semibold uppercase tracking-widest px-4 py-2 mb-5">{project.type}</span>
+                <h2 className="font-display text-3xl sm:text-4xl font-bold leading-tight mb-2">{project.title}</h2>
+                <p className="text-white/60 text-sm mb-8">{project.context}</p>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-display text-xl font-bold mb-2">Project goal</h3>
+                    <p className="text-white/75 leading-relaxed">{project.goal}</p>
                   </div>
-
-                  <h2
-                    className="font-display font-black text-white leading-tight mb-2"
-                    style={{ fontSize: 'clamp(1.8rem, 4vw, 3rem)' }}
-                  >
-                    {p.title}
-                  </h2>
-                  <p className="font-display text-xs tracking-widest uppercase text-white/30 mb-6">{p.client}</p>
-                  <p className="text-white/55 text-sm leading-relaxed mb-8 max-w-md">{p.description}</p>
-
-                  {/* Outcomes */}
-                  <ul className="flex flex-col gap-2 mb-8">
-                    {p.outcomes.map((o) => (
-                      <li key={o} className="flex items-start gap-3 text-sm text-white/60">
-                        <span className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full" style={{ background: 'var(--yellow-neon)' }} />
-                        {o}
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        className="font-display text-xs tracking-widest uppercase px-3 py-1 border border-white/10 text-white/30"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  <div>
+                    <h3 className="font-display text-xl font-bold mb-2">What we built</h3>
+                    <p className="text-white/75 leading-relaxed">{project.solution}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl font-bold mb-3">Features delivered</h3>
+                    <ul className="space-y-3">
+                      {project.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3 text-white/75 leading-relaxed">
+                          <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 mt-1 text-[#f4f53c]"><path d="m5 12 4 4L19 6" /></svg>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
-              </div>
-
-              {/* Image panel */}
-              <div
-                className={`relative hidden lg:block min-h-[420px] overflow-hidden ${i % 2 !== 0 ? 'lg:order-1' : ''}`}
-              >
-                <Image
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  src={p.image}
-                  alt={p.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-45 transition-opacity duration-500 scale-105 group-hover:scale-100 transition-transform"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: i % 2 === 0
-                      ? 'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 100%)'
-                      : 'linear-gradient(to left, transparent 0%, rgba(0,0,0,0.6) 100%)',
-                  }}
-                />
+                <Link href="/services/web-design-dev" className="button-secondary mt-8">Explore website development <ArrowIcon direction="up-right" className="ml-3" /></Link>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </section>
 
-      {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 pb-32">
-        <div
-          className="rounded-2xl px-10 py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
-          style={{
-            background: 'linear-gradient(135deg, #111 0%, #1a1a0a 100%)',
-            border: '1px solid rgba(244,245,60,0.1)',
-          }}
-        >
-          <div>
-            <h2 className="font-display font-black text-white text-4xl lg:text-5xl leading-tight mb-3">
-              GOT A PROJECT<br />
-              <span style={{ color: 'var(--yellow-neon)' }}>IN MIND?</span>
-            </h2>
-            <p className="text-white/50 text-sm max-w-md">
-              Let&apos;s talk about what you&apos;re building and how we can help you get there.
-            </p>
+      <section className="max-w-7xl mx-auto px-6 lg:px-12 pb-20 lg:pb-28">
+        <div className="rounded-2xl border border-[#f4f53c]/20 bg-[#f4f53c]/5 p-6 sm:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+          <div className="max-w-xl">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-3">Have a project in mind?</h2>
+            <p className="text-white/75 leading-relaxed">Tell us what your business needs. We’ll help you shape the next step.</p>
           </div>
-          <a
-            href="/contact/"
-            className="shrink-0 font-display text-sm font-black tracking-widest uppercase px-10 py-5 bg-[#f4f53c] text-black rounded-full hover:scale-105 transition-all duration-300"
-          >
-            Start a Project
-          </a>
+          <Link href="/contact" className="button-primary shrink-0">Discuss your project <ArrowIcon direction="up-right" className="ml-3" /></Link>
         </div>
       </section>
-
       <Footer />
     </main>
   )
