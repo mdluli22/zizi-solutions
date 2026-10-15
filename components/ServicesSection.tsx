@@ -1,3 +1,4 @@
+import ArrowIcon from './ArrowIcon'
 import Link from 'next/link'
 
 import { services } from '../lib/services'
@@ -25,7 +26,7 @@ export default function ServicesSection() {
                 <h3 className="font-display text-3xl font-bold leading-tight mb-4">{service.title}</h3>
                 <p className="text-white/75 leading-relaxed mb-5">{service.description}</p>
                 <p className="text-white/55 text-sm leading-relaxed mb-7">{service.details}</p>
-                <Link href={service.path} className="button-secondary mt-auto" aria-label={`Learn more: ${service.title}`}>Explore service <span aria-hidden="true" className="ml-3">↗</span></Link>
+                <Link href={service.path} className="button-secondary mt-auto" aria-label={`Learn more: ${service.title}`}>Explore service <ArrowIcon direction="up-right" className="ml-3" /></Link>
               </div>
             </article>
           ))}
@@ -36,7 +37,7 @@ export default function ServicesSection() {
             <h3 className="font-display text-3xl font-bold mb-3">Not sure where to start?</h3>
             <p className="text-white/75 leading-relaxed">Tell us what is slowing your business down. We’ll help you choose a practical next step.</p>
           </div>
-          <Link href="/contact" className="button-primary shrink-0">Let’s talk <span aria-hidden="true" className="ml-3">↗</span></Link>
+          <Link href="/contact" className="button-primary shrink-0">Let’s talk <ArrowIcon direction="up-right" className="ml-3" /></Link>
         </div>
       </div>
     </section>

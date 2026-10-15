@@ -1,3 +1,4 @@
+import ArrowIcon from './ArrowIcon'
 import Link from 'next/link'
 import Navbar from './Navbar'
 import Footer from './Footer'
@@ -21,7 +22,7 @@ export default function ServicePage({ service }: { service: Service }) {
       <Navbar />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
       <section className="max-w-7xl mx-auto px-6 lg:px-12 pt-32 sm:pt-40 pb-16 lg:pb-24">
-        <Link href="/#services" className="button-secondary mb-8">← All services</Link>
+        <Link href="/#services" className="button-secondary mb-8"><ArrowIcon direction="left" className="mr-3" />All services</Link>
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <p className="text-[#f4f53c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">{service.outcome}</p>

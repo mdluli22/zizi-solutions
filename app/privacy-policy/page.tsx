@@ -1,3 +1,4 @@
+import ArrowIcon from '../../components/ArrowIcon'
 import { pageMetadata } from '../../lib/seo'
 
 export const metadata = pageMetadata("Privacy Policy", "Read how Zizi Solutions handles personal information and enquiries submitted through this website.", "/privacy-policy")
@@ -166,9 +167,9 @@ export default function PrivacyPolicyPage() {
         <div className="flex gap-4 pt-4 flex-wrap">
           <Link
             href="/terms-of-service"
-            className="font-display text-xs font-black tracking-widest uppercase px-6 py-3 border border-white/10 text-white/40 hover:text-white hover:border-white/30 transition-all duration-300"
+            className="inline-flex items-center font-display text-xs font-black tracking-widest uppercase px-6 py-3 border border-white/10 text-white/40 hover:text-white hover:border-white/30 transition-all duration-300"
           >
-            Terms of Service →
+            Terms of Service <ArrowIcon className="ml-3" />
           </Link>
           <Link
             href="/contact"

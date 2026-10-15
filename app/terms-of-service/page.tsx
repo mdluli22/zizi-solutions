@@ -1,3 +1,4 @@
+import ArrowIcon from '../../components/ArrowIcon'
 import { pageMetadata } from '../../lib/seo'
 
 export const metadata = pageMetadata("Terms of Service", "Read the terms governing use of the Zizi Solutions website and services.", "/terms-of-service")
@@ -190,9 +191,9 @@ export default function TermsOfServicePage() {
         <div className="flex gap-4 pt-4 flex-wrap">
           <Link
             href="/privacy-policy"
-            className="font-display text-xs font-black tracking-widest uppercase px-6 py-3 border border-white/10 text-white/40 hover:text-white hover:border-white/30 transition-all duration-300"
+            className="inline-flex items-center font-display text-xs font-black tracking-widest uppercase px-6 py-3 border border-white/10 text-white/40 hover:text-white hover:border-white/30 transition-all duration-300"
           >
-            Privacy Policy →
+            Privacy Policy <ArrowIcon className="ml-3" />
           </Link>
           <Link
             href="/contact"
