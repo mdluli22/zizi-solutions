@@ -20,15 +20,15 @@ export default function Navbar() {
         scrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/5' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20 gap-4">
         {/* Logo */}
-        <a href="/" className="font-display text-2xl font-black tracking-widest text-white">
-          <img src="/whiteLogo.png" alt="Zizi Solutions Logo" className="inline-block h-8 w-auto mr-3" />
+        <a href="/" className="font-display text-xl lg:text-2xl font-black tracking-wide shrink-0 text-white">
+          <img src="/whiteLogo.png" alt="Zizi Solutions Logo" className="inline-block h-8 w-auto mr-2" />
           ZIZI <span style={{ color: 'var(--yellow-neon)' }}>SOLUTIONS</span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-2">
           {[
             { label: 'Services', href: pathname === '/' ? '#services' : '/#services' },
             { label: 'About', href: '/about' },
@@ -38,7 +38,7 @@ export default function Navbar() {
             <Link
               key={label}
               href={href}
-              className="nav-link font-display text-sm font-semibold tracking-widest text-white/70 hover:text-white transition-colors uppercase"
+              className="rounded-full px-4 py-2 font-display text-sm font-semibold tracking-widest text-white/80 hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#f4f53c] transition-colors uppercase"
             >
               {label}
             </Link>
@@ -48,16 +48,18 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           href="/contact"
-          className="hidden md:block font-display text-sm font-bold tracking-widest uppercase px-6 py-3 border border-[#f4f53c] text-[#f4f53c] hover:bg-[#f4f53c] hover:text-black transition-all duration-300"
+          className="button-primary hidden lg:inline-flex text-sm"
         >
           Get in Touch
         </Link>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
           <span className={`block w-6 h-0.5 bg-white transition-all ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-6 h-0.5 bg-white transition-all ${menuOpen ? 'opacity-0' : ''}`} />
@@ -67,7 +69,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black/95 border-t border-white/10 px-6 py-8 flex flex-col gap-6">
+        <div id="mobile-navigation" className="lg:hidden bg-black/95 border-t border-white/10 px-6 py-8 flex flex-col gap-6">
           {[
             { label: 'Services', href: pathname === '/' ? '#services' : '/#services' },
             { label: 'About', href: '/about' },

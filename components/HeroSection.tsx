@@ -1,11 +1,12 @@
 'use client'
 import dynamic from 'next/dynamic'
+import Link from 'next/link'
 
 const ParticleOrb = dynamic(() => import('./ParticleOrb'), { ssr: false })
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center">
+    <section className="relative min-h-[90svh] bg-black overflow-hidden flex items-center justify-center">
       {/* Background subtle radial glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -34,65 +35,28 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Floating card */}
-      <div
-        className="absolute float-left hidden sm:block"
-        style={{ left: '3%', top: '35%', zIndex: 10 }}
-      >
-        <div
-          className="backdrop-blur-md px-9 py-6 rounded-lg max-w-xs"
-          style={{
-            background: 'rgba(40, 30, 40, 0.55)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-          }}
-        >
-          <h3 className="font-display text-base font-black tracking-widest text-white mb-2 uppercase">
-            Custom Software Solutions
-          </h3>
-          <p className="text-white/60 text-xs leading-relaxed">
-            From landing pages to full-stack web applications,<br />
-            we build pixel-perfect, performant sites<br />
-            tailored to your business
-          </p>
-        </div>
-      </div>
-
-      {/* Floating card — Artificial Intelligence */}
-      <div
-        className="absolute float-right hidden sm:block"
-        style={{ right: '3%', bottom: '18%', zIndex: 10 }}
-      >
-        <div
-          className="backdrop-blur-md px-9 py-6 rounded-lg max-w-xs"
-          style={{
-            background: 'rgba(60, 25, 25, 0.55)',
-            border: '1px solid rgba(255,255,255,0.1)',
-            boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-          }}
-        >
-          <h3 className="font-display text-base font-black tracking-widest text-white mb-2 uppercase">
-            AI Integration Processing
-          </h3>
-          <p className="text-white/60 text-xs leading-relaxed">
-            Transform raw data into clear analytics and dashboards,<br />
-            build robust ETL and aggregation pipelines for reliable reporting,<br />
-            and deploy models & anomaly detection to surface actionable insights
-          </p>
-        </div>
-      </div>
-
       {/* Center hero text overlay — subtle */}
-      <div className="relative z-10 text-center px-4 pointer-events-none" style={{ marginTop: '-10vh' }}>
-        <p className="font-display text-base tracking-[0.4em] text-[#f4f53c]/90 uppercase mb-4">
+      <div className="relative z-10 text-center px-6 pt-36 pb-40 sm:pt-44 sm:pb-48 w-full">
+        <h1 className="font-display font-black text-white text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl mx-auto mb-6">
+          Website Development &amp; Custom Software Solutions
+        </h1>
+        <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-6">
+          Zizi Solutions builds websites and web applications, with brand identity,
+          data analytics and AI integration for businesses in South Africa and beyond.
+        </p>
+        <p className="font-display text-xs sm:text-sm tracking-[0.2em] text-[#f4f53c]/90 uppercase mb-4">
           Intelligent Solutions Built Around You.
         </p>
+        <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
+          <Link href="/contact" className="button-primary">Start your project</Link>
+          <Link href="/work" className="button-secondary">Explore our work</Link>
+        </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
         <span className="font-display text-sm tracking-widest text-white/70 uppercase">Scroll</span>
-        <div className="w-[2px] h-14 rounded-full bg-gradient-to-b from-white/70 via-white/40 to-transparent" />
+        <div className="w-[2px] h-8 rounded-full bg-gradient-to-b from-white/70 via-white/40 to-transparent" />
       </div>
     </section>
   )

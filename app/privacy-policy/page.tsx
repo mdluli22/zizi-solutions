@@ -1,3 +1,7 @@
+import { pageMetadata } from '../../lib/seo'
+
+export const metadata = pageMetadata("Privacy Policy", "Read how Zizi Solutions handles personal information and enquiries submitted through this website.", "/privacy-policy")
+
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'

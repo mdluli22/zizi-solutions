@@ -1,3 +1,7 @@
+import { pageMetadata } from '../../lib/seo'
+
+export const metadata = pageMetadata("Website Development Portfolio", "Explore Zizi Solutions website projects, including Security Professionals and our own website, with descriptions of the work delivered.", "/work")
+
 import Link from 'next/link'
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
@@ -12,7 +16,7 @@ const projects = [
     year: '2025',
     description:
       'Secpro is your trusted partner for professional, accredited firearm training and unforgettable shooting experiences.',
-    outcomes: ['Higher SEO rankings leading to a 50% increase in organic traffic', 'Modern, mobile-responsive design improving user engagement by 35%', 'Streamlined booking flow resulting in a 20% boost in conversions'],
+    outcomes: ['Website design and development for a firearm training business', 'Mobile-responsive page layouts', 'Booking flow improvements'],
     tags: ['Marketing Advancement', 'Web Development', 'SEO upgrade'],
     gradient: 'linear-gradient(135deg, #1a0808 0%, #0a1500 100%)',
     accentColor: 'rgba(40,160,40,0.15)',
@@ -27,7 +31,7 @@ const projects = [
     // year: '2024',
     description:
       'Our own digital home. Built from the ground up to reflect who we are — a modern, performance-first website that communicates our services, showcases our work, and converts visitors into clients. From the animated particle orb to the dark editorial layout, every detail was intentional.',
-    outcomes: ['Sub-second load times with Next.js App Router and dynamic imports', 'Fully responsive across all devices with a bold, consistent design system', 'Clear service and portfolio pages driving direct client enquiries'],
+    outcomes: ['Built with Next.js App Router and dynamically imported animations', 'Fully responsive across all devices with a bold, consistent design system', 'Service and portfolio pages linked to a contact enquiry form'],
     tags: ['Next.js', 'Tailwind CSS', 'Brand Identity', 'Motion'],
     gradient: 'linear-gradient(135deg, #1a0a2e 0%, #0a1a2e 100%)',
     accentColor: 'rgba(80,40,180,0.15)',
@@ -89,7 +93,7 @@ export default function WorkPage() {
             <span style={{ color: 'var(--yellow-neon)' }}>WORK_</span>
           </h1>
           <p className="text-white/50 text-sm leading-relaxed max-w-xl">
-            A selection of projects we&apos;ve delivered — each one built to solve a real problem, grounded in strategy, and measured by outcomes that matter to our clients.
+            A selection of projects we&apos;ve delivered — each one built to solve a real problem, grounded in strategy, with a summary of the work delivered.
           </p>
         </div>
       </section>

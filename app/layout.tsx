@@ -1,26 +1,24 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { siteUrl } from '../lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Zizi Solutions',
-  description: 'Intelligent solutions built around you.',
-  keywords: [
-    "web development South Africa",
-    "software company Durban",
-    "website design South Africa",
-    "custom software development",
-    "Next.js developers South Africa",
-  ],
-  metadataBase: new URL("https://www.zizisolutions.co.za"),
-  openGraph: {
-    title: "Zizi Solutions",
-    description:
-      "Web development and software solutions for modern businesses.",
-    url: "https://www.zizisolutions.co.za",
-    siteName: "Zizi Solutions",
-    locale: "en_ZA",
-    type: "website",
-  },
+  metadataBase: new URL(siteUrl),
+  title: { default: 'Zizi Solutions | Website Development & Custom Software', template: '%s | Zizi Solutions' },
+  description: 'Website development, custom software, brand identity, data analytics and AI integration for businesses in South Africa and beyond.',
+}
+
+const business = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: 'Zizi Solutions',
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  description: 'Website development, custom software, brand identity, data analytics and AI integration.',
+  email: 'admin@zizisolutions.co.za',
+  telephone: '+27681545803',
+  sameAs: ['https://www.tiktok.com/@zizisolutions', 'https://www.facebook.com/zizisolutions'],
 }
 
 export default function RootLayout({
@@ -30,7 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(business).replace(/</g, '\\u003c') }} />
+        {children}
+      </body>
     </html>
   )
 }

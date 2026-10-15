@@ -137,7 +137,7 @@ export default function ContactPage() {
       </section>
 
       {/* Main content */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 pb-32 grid grid-cols-1 lg:grid-cols-5 gap-16">
+      <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 pb-32 grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
 
         {/* Left — contact details */}
         <div className="lg:col-span-2 flex flex-col gap-10">
@@ -183,10 +183,10 @@ export default function ContactPage() {
 
           <div>
             <h3 className="font-display font-black text-white text-lg uppercase tracking-widest mb-3">
-              Based In
+              Service Area
             </h3>
             <p className="text-white/40 text-sm leading-relaxed">
-              Durban, South Africa — serving clients <span className="text-white/70">locally and globally.</span>
+              Serving clients <span className="text-white/70">locally and globally.</span>
             </p>
           </div>
         </div>
@@ -222,55 +222,59 @@ export default function ContactPage() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl p-10 border border-white/5 flex flex-col gap-6"
+              className="rounded-2xl p-6 sm:p-8 lg:p-10 border border-white/5 flex flex-col gap-6"
               style={{ background: 'rgba(255,255,255,0.03)' }}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label className="font-display text-xs tracking-widest uppercase text-white/30">Name *</label>
+                  <label htmlFor="contact-name" className="font-display text-xs tracking-widest uppercase text-white/90">Name *</label>
                   <input
                     type="text"
+                    id="contact-name"
                     name="name"
                     required
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="bg-transparent border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#f4f53c]/50 transition-colors"
+                    className="bg-transparent border border-white/25 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-[#f4f53c]/50 transition-colors"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label className="font-display text-xs tracking-widest uppercase text-white/30">Email *</label>
+                  <label htmlFor="contact-email" className="font-display text-xs tracking-widest uppercase text-white/90">Email *</label>
                   <input
                     type="email"
+                    id="contact-email"
                     name="email"
                     required
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="your@email.com"
-                    className="bg-transparent border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#f4f53c]/50 transition-colors"
+                    className="bg-transparent border border-white/25 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-[#f4f53c]/50 transition-colors"
                   />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="font-display text-xs tracking-widest uppercase text-white/30">Company / Organisation</label>
+                <label htmlFor="contact-company" className="font-display text-xs tracking-widest uppercase text-white/90">Company / Organisation</label>
                 <input
                   type="text"
+                  id="contact-company"
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Your company name (optional)"
-                  className="bg-transparent border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#f4f53c]/50 transition-colors"
+                  className="bg-transparent border border-white/25 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-[#f4f53c]/50 transition-colors"
                 />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="font-display text-xs tracking-widest uppercase text-white/30">Service of Interest</label>
+                <label htmlFor="contact-service" className="font-display text-xs tracking-widest uppercase text-white/90">Service of Interest</label>
                 <select
+                  id="contact-service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="bg-[#0a0a0a] border border-white/10 rounded-lg px-4 py-3 text-sm text-white/70 focus:outline-none focus:border-[#f4f53c]/50 transition-colors appearance-none cursor-pointer"
+                  className="bg-[#0a0a0a] border border-white/25 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-[#f4f53c]/50 transition-colors appearance-none cursor-pointer"
                 >
                   <option value="" disabled>Select a service...</option>
                   {services.map((s) => (
@@ -280,15 +284,16 @@ export default function ContactPage() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label className="font-display text-xs tracking-widest uppercase text-white/30">Message *</label>
+                <label htmlFor="contact-message" className="font-display text-xs tracking-widest uppercase text-white/90">Message *</label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   required
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your project, goals, or any questions you have..."
-                  className="bg-transparent border border-white/10 rounded-lg px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#f4f53c]/50 transition-colors resize-none"
+                  className="bg-transparent border border-white/25 rounded-lg px-4 py-3 text-sm text-white placeholder:text-white/60 focus:outline-none focus:border-[#f4f53c]/50 transition-colors resize-none"
                 />
               </div>
 

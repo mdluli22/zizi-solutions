@@ -1,121 +1,75 @@
-'use client'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
-
-const ServiceParticle = dynamic(() => import('./ServiceParticle'), { ssr: false })
 
 const services = [
   {
-    title: 'CUSTOM\nWEB\nDESIGN &\nDEVELOPMENT',
-    colorScheme: 'blue-purple' as const,
-    gradient: 'linear-gradient(135deg, #1a0a2e 0%, #0a1a2e 100%)',
+    label: 'Website design & development',
+    title: 'Websites that work for you',
+    description: 'Give your business a website that looks great, works on every screen and makes it easy for customers to get in touch.',
+    details: 'Business websites · Web applications · API integrations',
     path: '/services/web-design-dev',
+    position: '0% 17%',
   },
   {
-    title: 'BRAND\nIDENTITY &\nSTRATEGY',
-    colorScheme: 'pink-red' as const,
-    gradient: 'linear-gradient(135deg, #2e0a0a 0%, #1a1000 100%)',
+    label: 'Branding & design',
+    title: 'A brand people remember',
+    description: 'Build a clear, consistent identity that helps your business stand out wherever customers find you.',
+    details: 'Logo design · Visual identity · Brand strategy',
     path: '/services/brand-identity',
+    position: '100% 17%',
   },
   {
-    title: 'DATA &\nBUSINESS\n ANALYTICS',
-    colorScheme: 'red-rainbow' as const,
-    gradient: 'linear-gradient(135deg, #1a0808 0%, #0a1500 100%)',
+    label: 'Data & analytics',
+    title: 'Turn data into direction',
+    description: 'Bring your numbers together in clear dashboards and reports, so you can see what matters and plan your next move.',
+    details: 'Dashboards · Reporting · Data integration',
     path: '/services/analytics',
+    position: '0% 83%',
   },
   {
-    title: 'AI\nINTEGRATION\nPROCESSING',
-    colorScheme: 'purple-pink' as const,
-    gradient: 'linear-gradient(135deg, #0f0820 0%, #050a1a 100%)',
+    label: 'AI & automation',
+    title: 'Make everyday work easier',
+    description: 'Connect AI to your existing tools and automate repetitive tasks, giving your team more time for the work that matters.',
+    details: 'AI integration · Workflow automation · Connected tools',
     path: '/services/ai-integration',
+    position: '100% 83%',
   },
 ]
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="relative grid-texture" style={{ background: '#0a0a0a' }}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-24 lg:py-32">
-        {/* Section heading */}
-        <div className="mb-16">
-          <h2
-            className="font-display font-black leading-none"
-            style={{ fontSize: 'clamp(3.5rem, 10vw, 9rem)' }}
-          >
-            <span className="text-white block">SERVICES</span>
-            <span style={{ color: 'var(--yellow-neon)' }} className="block">
-              WE OFFER_
-            </span>
-          </h2>
+    <section id="services" className="bg-[#0a0a0a]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div className="max-w-2xl mb-10 lg:mb-14">
+          <p className="text-[#f4f53c] text-xs font-semibold uppercase tracking-[0.2em] mb-4">What we can do for you</p>
+          <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight mb-5">Your next step,<br /><span className="text-[#f4f53c]">made simple.</span></h2>
+          <p className="text-white/70 text-lg leading-relaxed">From your first website to smarter ways of working, we build digital solutions around your business.</p>
         </div>
 
-        {/* Service Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
-          {services.map((service, i) => (
-            <Link
-              key={i}
-              href={service.path}
-              className="service-card relative rounded-xl overflow-hidden cursor-pointer group"
-              style={{
-                background: service.gradient,
-                height: '420px',
-                border: '1px solid rgba(255,255,255,0.05)',
-              }}
-            >
-              {/* Particle canvas */}
-              <div className="absolute inset-0">
-                <ServiceParticle colorScheme={service.colorScheme} />
-              </div>
-
-              {/* Text overlay */}
-              <div className="absolute top-0 left-0 right-0 p-7 z-10">
-                <h3
-                  className="font-display font-black text-white leading-tight"
-                  style={{ fontSize: 'clamp(1.3rem, 3vw, 1.8rem)', whiteSpace: 'pre-line' }}
-                >
-                  {service.title}
-                </h3>
-              </div>
-
-              {/* Hover gradient overlay */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {services.map((service) => (
+            <article key={service.path} className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#111113] transition-colors hover:border-white/25">
               <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(244,245,60,0.05) 0%, transparent 60%)',
-                }}
+                className="aspect-[16/9] bg-[#18181b] bg-no-repeat border-b border-white/10"
+                style={{ backgroundImage: 'url(/images/services-studio.jpg)', backgroundSize: '200% auto', backgroundPosition: service.position }}
+                aria-hidden="true"
               />
-
-              {/* Arrow on hover */}
-              <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center"
-                  style={{ background: 'var(--yellow-neon)' }}
-                >
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 13L13 3M13 3H5M13 3V11" stroke="black" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </div>
+              <div className="flex flex-1 flex-col items-start p-6 sm:p-8">
+                <p className="text-[#f4f53c] text-xs font-semibold uppercase tracking-widest mb-3">{service.label}</p>
+                <h3 className="font-display text-3xl font-bold leading-tight mb-4">{service.title}</h3>
+                <p className="text-white/75 leading-relaxed mb-5">{service.description}</p>
+                <p className="text-white/55 text-sm leading-relaxed mb-7">{service.details}</p>
+                <Link href={service.path} className="button-secondary mt-auto" aria-label={`Learn more: ${service.title}`}>Explore service <span aria-hidden="true" className="ml-3">↗</span></Link>
               </div>
-            </Link>
+            </article>
           ))}
         </div>
 
-        {/* Additional services hint */}
-        <div className="mt-12 flex flex-wrap gap-4">
-          {/* Services Coming Soon */}
-          <h4 className="font-display text-sm font-black text-white mb-2">Coming Soon</h4>
-          <p className="text-white/60 text-sm leading-relaxed mb-4">
-            We're constantly working on new solutions to meet our clients' needs. Stay tuned for updates on these exciting services!
-          </p>
-          <div className="flex flex-wrap gap-2">
-          {['AI Data Solutions', 'Database Architecture Redesign', 'AWS Cloud Infrastructure'].map((s) => (
-            <span
-              key={s}
-              className="font-display text-xs font-bold tracking-widest uppercase px-5 py-2 border border-white/10 text-white/40 hover:text-white hover:border-white/30 transition-all duration-300 cursor-pointer"
-            >
-              {s}
-            </span>
-          ))}
+        <div className="mt-8 rounded-2xl border border-[#f4f53c]/20 bg-[#f4f53c]/5 p-6 sm:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div className="max-w-xl">
+            <h3 className="font-display text-3xl font-bold text-white mb-3">Need something built just for you?</h3>
+            <p className="text-white/75 leading-relaxed">Custom software that fits the way your business works. Tell us what you need, and we’ll help you shape the solution.</p>
           </div>
+          <Link href="/services/custom-software" className="button-primary lg:shrink-0">Explore custom software <span aria-hidden="true" className="ml-3">↗</span></Link>
         </div>
       </div>
     </section>

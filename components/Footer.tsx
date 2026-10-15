@@ -11,7 +11,7 @@ export default function Footer() {
               ZIZI<span style={{ color: 'var(--yellow-neon)' }}> SOLUTIONS</span>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-              We are a digital solutions agency focused on delivering innovative and effective strategies for our clients.
+              Serving clients locally and globally with website development, custom software, branding, analytics and AI integration.
             </p>
           </div>
 
@@ -20,7 +20,7 @@ export default function Footer() {
             <h4 className="font-display text-xs font-black tracking-widest uppercase text-white/30 mb-4">Company</h4>
             <ul className="space-y-3">
               {[
-                { label: 'About', href: '/#about' },
+                { label: 'About', href: '/about' },
                 { label: 'Services', href: '/#services' },
                 { label: 'Work', href: '/work' },
               ].map(({ label, href }) => (

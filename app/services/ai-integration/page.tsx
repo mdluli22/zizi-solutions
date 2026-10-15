@@ -1,3 +1,7 @@
+import { pageMetadata } from '../../../lib/seo'
+
+export const metadata = pageMetadata("AI Integration Services", "AI integration services from Zizi Solutions to help businesses automate workflows and connect AI capabilities to their existing systems.", "/services/ai-integration")
+
 import Link from 'next/link'
 import Navbar from '../../../components/Navbar'
 import Footer from '../../../components/Footer'

@@ -1,3 +1,7 @@
+import { pageMetadata } from '../../../lib/seo'
+
+export const metadata = pageMetadata("Brand Identity & Strategy", "Brand strategy and visual identity services from Zizi Solutions, helping businesses build a consistent presence across digital and print.", "/services/brand-identity")
+
 import Link from 'next/link'
 import Navbar from '../../../components/Navbar'
 
