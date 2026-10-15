@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { siteUrl } from '../lib/seo'
+import WhatsAppButton from '../components/WhatsAppButton'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(business).replace(/</g, '\\u003c') }} />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   )
