@@ -1,0 +1,94 @@
+# Zizi Solutions — business and service reference
+
+Website: https://www.zizisolutions.co.za/
+Source: The public business content in this website. Linked pages provide the current details.
+
+## Business overview
+
+Zizi Solutions is a technology studio focused on intelligent, scalable software for businesses. Its three service areas are website development & SEO, business automation & AI integration, and data dashboards & reporting. The services address small and medium businesses, with clients served locally and globally.
+
+Founder & Lead Engineer: Akhona Mdluli.
+About: https://www.zizisolutions.co.za/about
+
+## Website development & SEO
+
+Source: https://www.zizisolutions.co.za/services/web-design-dev
+
+For businesses launching their first website, refreshing an outdated site, or helping customers find them online. The service focuses on professional websites that explain the business and make it easier to buy, book or get in touch.
+
+Capabilities:
+- Fast, mobile-friendly business websites that guide visitors towards an enquiry.
+- Online stores with product pages, shopping carts and payment integrations.
+- Booking, quotation and enquiry forms.
+- SEO foundations: page titles, useful content, internal links and technical checks.
+- Local search visibility through consistent business information and service-area content.
+- Testing, launch handover and maintenance options agreed around business needs.
+
+Illustrative use case: Bring a service business's service information, quote requests and booking forms together on a mobile-friendly website. This is an example of possible work, not a reported client result.
+
+## Business automation & AI integration
+
+Source: https://www.zizisolutions.co.za/services/ai-integration
+
+For teams spending time copying information, chasing follow-ups or answering repeated questions across disconnected systems. The service connects existing tools and automates repetitive administration.
+
+Capabilities:
+- Draft quotation workflows with a review step before sending to customers.
+- Invoice reminders and follow-up tasks based on invoicing processes and payment status.
+- Customer enquiry support and routing, including chatbot options where suitable.
+- Connections between websites, CRMs, spreadsheets and other systems through appropriate APIs and integrations.
+- AI for summarising information, preparing drafts and organising requests, with human review where needed.
+- Workflow testing, documentation and team handover.
+
+Illustrative use case: Connect incoming email enquiries to a spreadsheet, create follow-up tasks and prepare draft responses for review. This is an example of possible work, not a reported client result.
+
+## Data dashboards & reporting
+
+Source: https://www.zizisolutions.co.za/services/analytics
+
+For owners and teams who need a clearer view of performance and spend too long gathering figures from different places. The service combines business information and reduces repetitive spreadsheet preparation.
+
+Capabilities:
+- Dashboards showing sales, expenses and customer measures.
+- Sales and expense reporting to make trends easier to understand.
+- Stock visibility using available stock and sales information.
+- Connected spreadsheets, databases and business tools, with checks for missing or inconsistent information.
+- Automated spreadsheet reports and repeatable data preparation.
+- Agreed reporting schedules, measure definitions, documentation and team handover.
+
+Illustrative use case: Combine separate sales, expense and stock spreadsheets into a dashboard with an agreed reporting schedule. This is an example of possible work, not a reported client result.
+
+## Contact and availability
+
+Contact page: https://www.zizisolutions.co.za/contact
+Email: admin@zizisolutions.co.za
+Phone: +27 78 189 7780
+Service area: Locally and globally.
+Typical response time: Within 24 hours on business days.
+Operating hours, South African Standard Time (SAST, UTC+2):
+- Monday–Friday: 07:00–18:00.
+- Saturday: 09:00–13:00.
+- Sunday: Closed.
+
+## Common enquiries
+
+What services are available?
+Website development & SEO, business automation & AI integration, and data dashboards & reporting.
+
+Can Zizi Solutions connect existing business tools?
+The automation service includes suitable APIs and integrations between websites, CRMs, spreadsheets and other systems. Feasibility depends on the particular tools and project scope.
+
+Can Zizi Solutions reduce manual reporting?
+The reporting service includes connected data sources, repeatable data preparation, automated spreadsheet reports and scheduled reporting.
+
+How can a project be discussed?
+Use the contact form, email or phone to share project goals and questions. Confirm scope, price, delivery dates, availability and maintenance directly with the business.
+
+## Additional sources
+
+Portfolio: https://www.zizisolutions.co.za/work
+Privacy policy: https://www.zizisolutions.co.za/privacy-policy
+Terms of service: https://www.zizisolutions.co.za/terms-of-service
+Page index: https://www.zizisolutions.co.za/llms.txt
+Public business profile: https://www.zizisolutions.co.za/agents.md
+Sitemap: https://www.zizisolutions.co.za/sitemap.xml

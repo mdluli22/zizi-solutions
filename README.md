@@ -50,3 +50,9 @@ npm start
 The PostCSS override keeps the framework and styling pipeline on a patched PostCSS 8 release. The lint plugin's glob override stays within glob 10 while applying its security patch. The patched 14.2 ESLint configuration remains compatible with ESLint 8 and avoids the vulnerable glob dependency chain in later lint configurations.
 
 Tailwind CSS 4 targets modern browsers (Safari 16.4+, Chrome 111+, Firefox 128+). Service illustration generation details are in `docs/service-imagery.md`.
+
+## Public AI reference files
+
+`public/agents.md`, `public/llms.txt` and `public/llms-full.txt` are served at the site root. They summarise the business and link to its public pages. Update them when services, contact details or hours change; `lib/services.ts`, the About page and the Contact page are the content sources. Keep `agents.md` in `public/`, separate from repository agent instructions.
+
+`app/robots.ts` serves `/robots.txt`, permits all crawlers and links to the sitemap. The reference files provide optional context for tools that choose to read them; they do not guarantee indexing, trust, citations or recommendations by AI services. Deployment is required before changes appear on the live domain.

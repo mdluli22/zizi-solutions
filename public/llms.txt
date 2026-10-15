@@ -1,0 +1,23 @@
+# Zizi Solutions
+
+> Zizi Solutions is a technology studio offering website development & SEO, business automation & AI integration, and data dashboards & reporting for small and medium businesses. It serves clients locally and globally.
+
+## Business and contact
+- [Home](https://www.zizisolutions.co.za/): Business overview and services.
+- [About](https://www.zizisolutions.co.za/about): Founder Akhona Mdluli, mission, and operating hours.
+- [Contact](https://www.zizisolutions.co.za/contact): Project enquiries; admin@zizisolutions.co.za; +27 78 189 7780.
+
+## Services
+- [Website development & SEO](https://www.zizisolutions.co.za/services/web-design-dev): Business websites, online stores, booking forms, and search visibility.
+- [Business automation & AI integration](https://www.zizisolutions.co.za/services/ai-integration): Quotation workflows, invoice reminders, customer enquiry support, and connected business tools.
+- [Data dashboards & reporting](https://www.zizisolutions.co.za/services/analytics): Sales, expense, stock, and customer dashboards with automated reports.
+
+## Further information
+- [Work](https://www.zizisolutions.co.za/work): Portfolio information.
+- [Business context](https://www.zizisolutions.co.za/llms-full.txt): Expanded business and service reference.
+- [Business profile for agents](https://www.zizisolutions.co.za/agents.md): Factual business summary and source links.
+- [Sitemap](https://www.zizisolutions.co.za/sitemap.xml): Public page index.
+
+## Optional
+- [Privacy policy](https://www.zizisolutions.co.za/privacy-policy)
+- [Terms of service](https://www.zizisolutions.co.za/terms-of-service)
