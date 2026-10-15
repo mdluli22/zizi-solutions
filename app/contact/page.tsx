@@ -108,7 +108,7 @@ export default function ContactPage() {
             <span style={{ color: 'var(--yellow-neon)' }}>TOUCH_</span>
           </h1>
           <p className="text-white/50 text-sm leading-relaxed max-w-lg">
-            Whether you have a project in mind, a question about our services, or just want to explore what&apos;s possible — we&apos;d love to hear from you.
+            Whether you have a project in mind, a question about our services, or just want to explore what&apos;s possible, we&apos;d love to hear from you.
           </p>
         </div>
       </section>
@@ -116,7 +116,7 @@ export default function ContactPage() {
       {/* Main content */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-16 pb-32 grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
 
-        {/* Left — contact details */}
+        {/* Left: contact details */}
         <div className="lg:col-span-2 flex flex-col gap-10">
           <div>
             <h2 className="font-display font-black text-white text-2xl uppercase tracking-widest mb-6">
@@ -168,7 +168,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Right — form */}
+        {/* Right: form */}
         <div className="lg:col-span-3">
           {submitted ? (
             <div

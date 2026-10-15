@@ -69,7 +69,7 @@ export default function WhatWeDoSection() {
             </a>
           </div>
 
-          {/* Right — About / Why choose me */}
+          {/* Right: About / Why choose me */}
           <div className="flex flex-col gap-6 pt-4 max-w-lg">
             <h3 className="font-display text-2xl font-black text-black mb-4">OUR STORY</h3>
             <p className="text-black/60 text-sm leading-relaxed mb-4">
@@ -80,10 +80,10 @@ export default function WhatWeDoSection() {
 
             <h3 className="font-display text-sm font-black text-black mb-3">WHY CHOOSE US</h3>
             <ul className="text-black/60 text-sm leading-relaxed list-disc pl-5 space-y-2">
-              <li>Direct access to the person building your product — faster decisions and clear ownership.</li>
-              <li>Outcome-first engagements — we define success with customer satisfaction in mind.</li>
-              <li>End-to-end delivery — from discovery and data pipelines to deployment and monitoring.</li>
-              <li>Lean, flexible teams — tailored to your needs and timelines without excess overhead.</li>
+              <li>Direct access to the person building your product: faster decisions and clear ownership.</li>
+              <li>Outcome-first engagements: we define success with customer satisfaction in mind.</li>
+              <li>End-to-end delivery: from discovery and data pipelines to deployment and monitoring.</li>
+              <li>Lean, flexible teams: tailored to your needs and timelines without excess overhead.</li>
             </ul>
           </div>
         </div>

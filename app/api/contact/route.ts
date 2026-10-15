@@ -107,7 +107,7 @@ export async function POST(req: NextRequest) {
       from: `"Zizi Solutions Contact" <${SMTP_USER}>`,
       to: CONTACT_EMAIL || 'admin@zizisolutions.co.za',
       replyTo: email,
-      subject: `New Contact Form Submission — ${name}`,
+      subject: `New Contact Form Submission | ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
           <h2 style="color: #f4f53c; font-size: 24px; margin-bottom: 24px;">New Contact Form Submission</h2>
@@ -153,14 +153,14 @@ export async function POST(req: NextRequest) {
       await transporter.sendMail({
         from: `"Zizi Solutions" <${SMTP_USER}>`,
         to: email,
-        subject: "We've received your message — Zizi Solutions",
+        subject: "We've received your message | Zizi Solutions",
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0a; color: #ffffff; padding: 40px; border-radius: 12px;">
             <h2 style="color: #f4f53c; font-size: 24px; margin-bottom: 16px;">Thanks for reaching out, ${safeName}!</h2>
             <p style="color: #aaa; line-height: 1.7;">We've received your message and will get back to you within <strong style="color: #fff;">24 hours</strong> on business days.</p>
             <p style="color: #aaa; line-height: 1.7; margin-top: 16px;">If your matter is urgent, you can reach us directly at <a href="tel:+27781897780" style="color: #f4f53c;">+27 78 189 7780</a>.</p>
             <hr style="border: none; border-top: 1px solid #222; margin: 32px 0;" />
-            <p style="color: #555; font-size: 12px;">— The Zizi Solutions Team · zizisolutions.co.za</p>
+            <p style="color: #555; font-size: 12px;">The Zizi Solutions Team · zizisolutions.co.za</p>
           </div>
         `,
       })

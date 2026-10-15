@@ -15,7 +15,7 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Orb Canvas — takes up full section */}
+      {/* Orb Canvas: takes up full section */}
       <div className="absolute inset-0">
         <ParticleOrb />
       </div>
@@ -35,7 +35,7 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Center hero text overlay — subtle */}
+      {/* Center hero text overlay: subtle */}
       <div className="relative z-10 text-center px-6 pt-36 pb-40 sm:pt-44 sm:pb-48 w-full">
         <h1 className="font-display font-black text-white text-4xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl mx-auto mb-6">
           Websites, Business Automation &amp; Data Analytics

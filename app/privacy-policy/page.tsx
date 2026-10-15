@@ -33,10 +33,10 @@ const sections = [
     title: '3. Legal Basis for Processing',
     content: [
       'We process your personal data on the following grounds:',
-      '• Contractual necessity — to fulfil a service agreement with you',
-      '• Legitimate interests — to respond to enquiries and improve our services',
-      '• Consent — where you have explicitly opted in',
-      '• Legal obligation — where required by applicable law',
+      '• Contractual necessity: to fulfil a service agreement with you',
+      '• Legitimate interests: to respond to enquiries and improve our services',
+      '• Consent: where you have explicitly opted in',
+      '• Legal obligation: where required by applicable law',
     ],
   },
   {

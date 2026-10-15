@@ -93,7 +93,7 @@ export default function AboutPage() {
               A World Where Technology Works For You
             </h2>
             <p className="text-white/55 text-sm leading-relaxed">
-              We envision a future where every business — regardless of size — has access to world-class software and AI capabilities. Our goal is to be the studio that bridges that gap, delivering enterprise-grade solutions with startup speed and transparency.
+              We envision a future where every business, regardless of size, has access to world-class software and AI capabilities. Our goal is to be the studio that bridges that gap, delivering enterprise-grade solutions with startup speed and transparency.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function AboutPage() {
               Intelligent Solutions Built Around You
             </h2>
             <p className="text-white/55 text-sm leading-relaxed">
-              Our mission is to design, build and deploy software that creates measurable value for our clients. We listen deeply, think strategically and execute with precision — partnering with businesses to turn complex challenges into elegant, performant products.
+              Our mission is to design, build and deploy software that creates measurable value for our clients. We listen deeply, think strategically and execute with precision, partnering with businesses to turn complex challenges into elegant, performant products.
             </p>
           </div>
         </div>

@@ -26,12 +26,12 @@ const projects = [
   {
     id: 2,
     title: 'Zizi Solutions',
-    client: 'In-house — Zizi Solutions',
+    client: 'In-house: Zizi Solutions',
     category: 'Custom Web Design & Development',
     categoryPath: '/services/web-design-dev',
     // year: '2024',
     description:
-      'Our own digital home. Built from the ground up to reflect who we are — a modern, performance-first website that communicates our services, showcases our work, and converts visitors into clients. From the animated particle orb to the dark editorial layout, every detail was intentional.',
+      'Our own digital home. Built from the ground up to reflect who we are: a modern, performance-first website that communicates our services, showcases our work, and converts visitors into clients. From the animated particle orb to the dark editorial layout, every detail was intentional.',
     outcomes: ['Built with Next.js App Router and dynamically imported animations', 'Fully responsive across all devices with a bold, consistent design system', 'Service and portfolio pages linked to a contact enquiry form'],
     tags: ['Next.js', 'Tailwind CSS', 'Brand Identity', 'Motion'],
     gradient: 'linear-gradient(135deg, #1a0a2e 0%, #0a1a2e 100%)',
@@ -41,12 +41,12 @@ const projects = [
 //   {
 //     id: 3,
 //     title: 'Brand Identity System',
-//     client: 'Confidential — Professional Services',
+//     client: 'Confidential: Professional Services',
 //     category: 'Brand Identity & Strategy',
 //     categoryPath: '/services/brand-identity',
 //     year: '2024',
 //     description:
-//       'Complete visual identity and brand strategy for a growing professional services firm entering a competitive market — from logo and colour system through to pitch deck templates and social media kits.',
+//       'Complete visual identity and brand strategy for a growing professional services firm entering a competitive market: from logo and colour system through to pitch deck templates and social media kits.',
 //     outcomes: ['Cohesive identity across 12 brand touchpoints', 'New positioning led to 3 enterprise client wins within 6 months', 'Full brand guidelines delivered for internal team use'],
 //     tags: ['Logo Design', 'Brand Strategy', 'Visual Identity'],
 //     gradient: 'linear-gradient(135deg, #2e0a0a 0%, #1a1000 100%)',
@@ -94,7 +94,7 @@ export default function WorkPage() {
             <span style={{ color: 'var(--yellow-neon)' }}>WORK_</span>
           </h1>
           <p className="text-white/50 text-sm leading-relaxed max-w-xl">
-            A selection of projects we&apos;ve delivered — each one built to solve a real problem, grounded in strategy, with a summary of the work delivered.
+            A selection of projects we&apos;ve delivered, each one built to solve a real problem, grounded in strategy, with a summary of the work delivered.
           </p>
         </div>
       </section>
